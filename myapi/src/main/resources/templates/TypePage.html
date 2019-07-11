@@ -11,12 +11,13 @@
 
 <h3>Liste des types:</h3><br/>
 
-
-
-
-
-
-
+<table th:object="${typeList}" id="typeTable" border="1">
+    <tr th:each="type :${typeList}">
+        <td  th:text="${type.getNom()}"></td>
+        <td  th:text="${type.getCaractéristique()}"></td>
+        <td>Consulter la liste des pokemon de ce type: <a href="/pokedex/pokemon/type/${type.getId()}">lien</a></td>
+    </tr>
+</table>
 
 </body>
 </html>

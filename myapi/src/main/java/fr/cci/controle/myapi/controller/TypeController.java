@@ -21,7 +21,7 @@ public class TypeController {
 
     @GetMapping(path ="/all")
     public String showAllType(Model model){
-        model.addAttribute("listType", typeRepository.findAll());
+        model.addAttribute("typeList", typeRepository.findAll());
         return "TypePage";
     }
 
