@@ -1,10 +1,7 @@
 package fr.cci.controle.myapi.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Pokemon {
@@ -14,6 +11,7 @@ public class Pokemon {
     private int pokemonId;
 
     private int numero;
+    @ManyToOne
     private Type type;
     private String image;
 

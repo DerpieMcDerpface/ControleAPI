@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(path = "/pokedex")
 public class HomeController {
 
-    @RequestMapping("/accueil")
+    @RequestMapping("/home")
     public String showHomepage(@RequestParam(required = false) String page, Model model){
         if (page != null || page == "2#") {
             model.addAttribute("page", page);
