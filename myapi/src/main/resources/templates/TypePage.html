@@ -12,10 +12,10 @@
 <h3>Liste des types:</h3><br/>
 
 <table th:object="${typeList}" id="typeTable" border="1">
-    <tr th:each="type :${typeList}">
-        <td  th:text="${type.getNom()}"></td>
-        <td  th:text="${type.getCaracteristique()}"></td>
-        <td><a href="@{|/pokemon/type/${type.typeId}|}">lien</a></td>
+    <tr th:each="pokeType :${typeList}">
+        <td  th:text="${pokeType.getNom()}"></td>
+        <td  th:text="${pokeType.getCaracteristique()}"></td>
+        <td><a th:href="@{|/pokemon/type/${pokeType.typeId}|}">lien</a></td>
     </tr>
 </table>
 

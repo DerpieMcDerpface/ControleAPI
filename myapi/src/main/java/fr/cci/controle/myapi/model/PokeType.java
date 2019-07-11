@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Type {
+public class PokeType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,12 +16,12 @@ public class Type {
     private String nom;
     private String caracteristique;
 
-    public Type() {
+    public PokeType() {
         this.nom = "Nom par défaut";
         this.caracteristique = "Caractéristique par défaut";
     }
 
-    public Type(int typeId, String nom, String caractéristique) {
+    public PokeType(int typeId, String nom, String caractéristique) {
         this.typeId = typeId;
         this.nom = nom;
         this.caracteristique = caractéristique;

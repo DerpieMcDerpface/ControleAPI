@@ -13,21 +13,21 @@ public class Pokemon {
     private String nom;
     private int numero;
     @ManyToOne
-    private Type type;
+    private PokeType pokeType;
     private String image;
 
     public Pokemon() {
         this.nom = "Nom par défaut";
         this.numero = 0;
-        this.type = new Type();
+        this.pokeType = new PokeType();
         this.image = "#";
     }
 
-    public Pokemon(String nom, int pokemonId, int numero, Type type, String image) {
+    public Pokemon(String nom, int pokemonId, int numero, PokeType pokeType, String image) {
         this.nom = nom;
         this.pokemonId = pokemonId;
         this.numero = numero;
-        this.type = type;
+        this.pokeType = pokeType;
         this.image = image;
     }
 
@@ -55,12 +55,12 @@ public class Pokemon {
         this.numero = numero;
     }
 
-    public Type getType() {
-        return type;
+    public PokeType getPokeType() {
+        return pokeType;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setPokeType(PokeType pokeType) {
+        this.pokeType = pokeType;
     }
 
     public String getImage() {
