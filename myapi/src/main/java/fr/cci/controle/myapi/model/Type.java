@@ -14,17 +14,17 @@ public class Type {
     private int typeId;
 
     private String nom;
-    private String caractéristique;
+    private String caracteristique;
 
     public Type() {
         this.nom = "Nom par défaut";
-        this.caractéristique = "Caractéristique par défaut";
+        this.caracteristique = "Caractéristique par défaut";
     }
 
     public Type(int typeId, String nom, String caractéristique) {
         this.typeId = typeId;
         this.nom = nom;
-        this.caractéristique = caractéristique;
+        this.caracteristique = caractéristique;
     }
 
 
@@ -44,11 +44,11 @@ public class Type {
         this.nom = nom;
     }
 
-    public String getCaractéristique() {
-        return caractéristique;
+    public String getCaracteristique() {
+        return caracteristique;
     }
 
-    public void setCaractéristique(String caractéristique) {
-        this.caractéristique = caractéristique;
+    public void setCaracteristique(String caractéristique) {
+        this.caracteristique = caractéristique;
     }
 }

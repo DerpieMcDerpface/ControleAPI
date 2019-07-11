@@ -11,7 +11,18 @@
 
 <h1>Liste des Pokemon de type [[${type.nom}]]:</h1><br/>
 
-
+<table th:object="${pokemonList}" id="pokemonTable" border="1">
+    <tr>
+        <td>NOM</td>
+        <td>NUMERO</td>
+        <td>IMAGE</td>
+    </tr>
+    <tr th:each="pokemon :${pokemonList}">
+        <td  th:text="${pokemon.getNom()}"></td>
+        <td  th:text="${pokemon.getNumero()}"></td>
+        <td  th:url="${pokemon.getImage()}"></td>
+    </tr>
+</table>
 
 
 

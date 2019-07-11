@@ -14,8 +14,8 @@
 <table th:object="${typeList}" id="typeTable" border="1">
     <tr th:each="type :${typeList}">
         <td  th:text="${type.getNom()}"></td>
-        <td  th:text="${type.getCaractéristique()}"></td>
-        <td>Consulter la liste des pokemon de ce type: <a href="/pokedex/pokemon/type/${type.getId()}">lien</a></td>
+        <td  th:text="${type.getCaracteristique()}"></td>
+        <td><a href="/pokedex/pokemon/type">lien</a></td>
     </tr>
 </table>
 
