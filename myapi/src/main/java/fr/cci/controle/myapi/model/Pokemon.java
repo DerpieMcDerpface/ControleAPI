@@ -10,22 +10,33 @@ public class Pokemon {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int pokemonId;
 
+    private String nom;
     private int numero;
     @ManyToOne
     private Type type;
     private String image;
 
     public Pokemon() {
+        this.nom = "Nom par défaut";
         this.numero = 0;
         this.type = new Type();
         this.image = "#";
     }
 
-    public Pokemon(int pokemonId, int numero, Type type, String image) {
+    public Pokemon(String nom, int pokemonId, int numero, Type type, String image) {
+        this.nom = nom;
         this.pokemonId = pokemonId;
         this.numero = numero;
         this.type = type;
         this.image = image;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public int getPokemonId() {
