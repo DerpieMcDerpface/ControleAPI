@@ -20,7 +20,7 @@
     <tr th:each="pokemon :${pokemonList}">
         <td  th:text="${pokemon.getNom()}"></td>
         <td  th:text="${pokemon.getNumero()}"></td>
-        <td  th:url="${pokemon.getImage()}"></td>
+        <td><img src="${pokemon.getImage()}"></td>
     </tr>
 </table>
 
